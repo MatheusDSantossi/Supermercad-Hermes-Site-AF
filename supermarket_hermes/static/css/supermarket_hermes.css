@@ -1,11 +1,497 @@
-body {
+:root {
+    --yellow: #FCF200;
+    --white_background_body: white;
+    --subtitle_light_gray: #6D7989;
+    --bg_white: #F8F9FA;
+    --bg_blackOR_title: #1B1A1C;
+    --like_purple: #332C36;
+    --black_title_subtitle: #404B5A;
+    --gray_bg: #E7E1E1;
+}
+
+@font-face {
+    font-family: Supermercado;
+    src: url("../fonts/SUPERMERCADOONE-REGULAR.TTF");
+    font-family: Hermeneus One;
+    src: url("../fonts/HermeneusOne-Regular.ttf");
+    font-family: Volkhov;
+    src: url("../fonts/Volkhov-Regular.ttf");
+    font-family: Gill Kayo Condensed Plain;
+    src: url("../fonts/gill-kayo-condensed-plain.otf");
+}
+
+/* body {
     margin: 0 25%;
     font-family: sans-serif;
     font-size: 1.5rem;
     color: #111111;
+    background-color: red;
+} */
+
+.margin-bottom90px {
+    margin-bottom: 90px;
 }
 
-h1 {
+.margin-bottom60px {
+    margin-bottom: 60px;
+}
+
+.margin-bottom30px {
+    margin-bottom: 30px;
+}
+
+.margin-right15px {
+    margin-right: 15px;
+}
+
+.margin-left30px {
+    margin-left: 30px;
+}
+
+/* BTN */
+
+/* .btn:hover {
+    
+} */
+
+.btn {
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    color: black;
+    border-color: var(--yellow);
+}
+
+.btn-outline-primary {
+    color: black;
+    border-color: var(--yellow);
+}
+
+.btn-outline-primary:hover {
+    color: black;
+    border-color: var(--yellow);
+    background-color: var(--yellow);
+}
+
+
+
+.full_black_bg {
+    background-color: black!important;
+}
+
+.purple_bg {
+    background-color: var(--like_purple)!important;
+}
+
+.gray_bg {
+    background-color: var(--gray_bg);
+}
+
+.font_color_purple {
+    color: var(--like_purple);
+}
+
+.font_color_light_gray {
+    color: var(--subtitle_light_gray);
+}
+
+body {
+    background-color: var(--white_background_body);
+}
+
+body h1 {
+    font-size: 60px;
+    font-family: Gill Kayo Condensed Plain;
+}
+
+body h3 {
+    font-size: 25px;
+}
+
+body h4 {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: Supermercado;
+}
+
+nav .navbar {
+    margin-bottom: 0!important;
+    background-color: var(--like_purple)!important;
+    color: white;
+}
+
+nav h2 {
+    font-family: Supermercado;
+}
+
+/* #icon_search {
+
+}
+
+#icon_shopping {
+    
+} */
+
+/* .nav-link {
+    color: white!important;
+    transition: ease-in 1s;
+} */
+
+.nav-item {
+    color: white!important;
+    transition: ease-in 1s;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white!important;
+    transition: ease-in 1s;
+}
+
+.navbar-dark .navbar-nav .nav-link :hover {
+    color: var(--yellow);
+    transition: ease-in 1s;
+}
+/* .nav-link:hover { 
+    color: var(--yellow)!important;
+    transition: color 1s ease-in-out,background-color 1s ease-in-out,border-color 1s ease-in-out,box-shadow 1s ease-in-out;
+} */
+
+.nav-item:hover { 
+    color: var(--yellow)!important;
+    transition: color 1s ease-in-out,background-color 1s ease-in-out,border-color 1s ease-in-out,box-shadow 1s ease-in-out;
+}
+
+.icons_nav {
+    display: flex;
+    align-self: center;
+    color: white;
+    margin-left: 120px;
+}
+
+span.carousel-subtitle-yellow {
+    color: var(--yellow);
+}
+
+.carousel-caption {
+    left: 56%;
+    bottom: 30%;
+    text-align: left;
+}
+
+.carousel-title {
+    font-size: 20px;
+}
+
+.carousel-subtitle {
+    font-size: 60px; /* REM tem disponibilidade para acessibilidade estudar mais depois */
+}
+
+#best_products h1 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.best_products_desc {
+    /* margin-top: 30px; */
+    margin-top: 15px;
+}
+
+#full_blog_posts_content {
+    margin-bottom: 90px;
+    background-image: url("./img/blog_bg.png");
+}
+
+#full_blog_posts_content h3 {
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    background-color: var(--like_purple);
+    color: white;
+}
+
+.card h5 {
+    color: rgba(255, 255, 255, 0.684);
+}
+
+.product .card img {
+    width: 352px;
+    height: 430px;
+    align-self: center;
+}
+
+/* #our_services {
+    margin-top: 90px;
+    margin-bottom: 90px;
+} */
+
+.yellow-block {
+    flex: 0 0 30%;
+    max-width: 30%;
+    background-color: yellow;
+    /* align-self: center; */
+    padding: 60px;
+}
+
+.black-block {
+    flex: 0 0 100%;
+    max-width: 70%;
+    background-color: rgb(24, 14, 33);
+    color: var(--white_background_body);
+    align-items: center;
+}
+
+.black-block-item img {
+    flex: 0 0 100%;
+    max-height: 65px;
+    max-width: 80px;
+}
+
+.black-block-item h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.black-block-item h6 {
+    color: var(--subtitle_light_gray);
+}
+
+.black-block-item .padlock-text {
+    margin-right: -80px;
+}
+
+/* #shopping_products {
+    margin-top: 90px;
+    margin-bottom: 90px;
+} */
+
+.shopping_products_text_content h3 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.shopping_products_text_content h4 {
+    margin-bottom: 15px;
+}
+
+.big_content {
+    background-color: white;
+}
+
+.big_content_specific {
+    /* margin-bottom: 60px; */
+    margin: 30px 0;
+}
+
+.bc_specific {
+    padding: 30px 15px;
+}
+
+.bc_specific2 {
+    background-color: var(--gray_bg);
+    padding: 30px 15px;
+}
+
+.big_content img {
+    flex: 0 0 100%;
+    max-height: 1000px;
+    max-width: 270px;
+    border-radius: 20%;
+}
+
+.small_content {
+    margin-top: 30px;
+}
+
+.smc_specific {
+    padding: 30px 15px;
+}
+
+.smc_specific2 {
+    padding: 30px 15px;
+}
+
+.smc_specific3 {
+    padding: 30px 15px;
+}
+
+.small_content img {
+    /* max-width: 950px;
+    max-height: 850px; */
+    max-width: 750px;
+    max-height: 200px;
+    border-radius: 20%;
+    align-self: center;
+}
+/* 
+.sm_ct_specific1 {
+    background-color: var(--gray_bg);
+}
+
+.sm_ct_specific3 {
+    background-color: var(--gray_bg);
+} */
+
+#mega_promotion {
+    padding: 200px;
+    background-color: gray;
+    background-image: url('img/shopping_cart.png');
+}
+
+.mega_promotion_content {
+    /* margin-left: 650px; */
+    margin-left: 291px;
+}
+
+/* #our_sections {
+    margin-top: 90px;
+    margin-bottom: 90px;
+} */
+
+#our_sections h1 {
+    text-align: center;
+}
+
+.sections {
+    justify-content: center;
+}
+
+.sections h5:hover {
+    color: var(--yellow)!important;
+    transition: color 1s ease-in-out,background-color 1s ease-in-out,border-color 1s ease-in-out,box-shadow 1s ease-in-out;
+}
+
+.sections h5 {
+    max-width: 18%!important;
+    text-align: center!important;
+    transition: ease-in 1s;
+}
+
+.products img {
+    width: 310px;
+    height: 310px;
+}
+
+.section_products_desc {
+    text-align: center;
+}
+
+.section_products_desc h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.section_products_desc h4 {
+    margin-bottom: 30px;
+}
+
+
+/* .section_products_desc i {
+    height: 35px;
+} */
+
+.section_products_desc svg {
+    height: 35px;
+    transition: ease-in 1s;
+}
+
+.section_products_desc svg:hover {
+    color: var(--yellow)!important;
+    transition: color 1s ease-in-out,background-color 1s ease-in-out,border-color 1s ease-in-out,box-shadow 1s ease-in-out;
+}
+
+.post_content img {
+    width: 245px;
+    height: 215px;
+    margin-bottom: 15px;
+}
+
+.post_content h5 {
+    padding: 15px;
+}
+
+.content h1 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.full_client_content {
+    color: white;
+}
+
+.full_client_content h6 {
+    margin-top: 30px;
+}
+
+/* PROCURA UMA MELHRO FORMA DE FAZER ISSO */
+.client1 {
+    margin-right: 30px;
+    padding: 30px 30px;
+}
+
+.client2 {
+    margin-right: -30px;
+    padding: 30px 30px;
+}
+
+.profile {
+    align-items: center;
+}
+
+.profile img {
+    max-width: 100px;
+    height: 70px;
+}
+
+footer {
+    color: white;
+    background-color: var(--like_purple);
+    padding: 30px 30px;
+}
+
+footer h5 {
+    margin-bottom: 30px;
+}
+
+footer h6 {
+    margin-bottom: 15px;
+}
+
+footer h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo_plus_socialMedia {
+    text-align: center;
+}
+
+.social-media {
+    justify-content: space-evenly;
+    display: flex;
+    font-family: monospace; /* por algum motivo isso dá espaço entre eles */
+}
+
+.social_media img {
+    margin-right: 15px;
+}
+
+.social_media img:hover {
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: var(--yellow)!important;
+}
+
+.rights {
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+
+/* h1 {
     text-align: center;
     font-family: serif;
     font-weight: normal;
@@ -27,4 +513,10 @@ p.date {
     font-size: 0.8rem;
     font-style: italic;
     margin-top: 1px;
-}
+} */
+
+/* @media screen 1379px {
+    .mega_promotion { 
+        margin-left: 210px;
+    }
+} */
